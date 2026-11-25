@@ -1,0 +1,13 @@
+
+# Dépendances
+node_modules/
+
+# Fichiers sensibles
+.env
+.env.*
+includes/config.php
+
+# Fichiers temporaires
+*.log
+.DS_Store
+Thumbs.db

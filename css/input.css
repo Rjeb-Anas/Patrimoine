@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@source "../";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* =====================================
+   TRANSITION FLUIDE DU DARK MODE
+===================================== */
+
+html,
+body,
+header,
+nav,
+footer,
+main,
+section,
+article,
+div,
+a,
+button,
+p,
+h1,
+h2,
+h3,
+span,
+input,
+textarea,
+select {
+    transition-property:
+        background-color,
+        border-color,
+        color,
+        box-shadow,
+        fill,
+        stroke;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* Éviter les transitions sur les images */
+img,
+svg {
+    transition: none;
+}
+
+/* Respecter les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
